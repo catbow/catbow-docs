@@ -9,7 +9,7 @@ const config = {
   title: 'Catbow Tutorial',
   tagline: 'Get up to Speed with Catbow',
   url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  baseUrl:'/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
