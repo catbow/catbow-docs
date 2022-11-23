@@ -8,8 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Catbow Tutorial',
   tagline: 'Get up to Speed with Catbow',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl:'/catbow-docs/',
+  url: 'https://catbow.github.io',
+  baseUrl:'/catbow-docs',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -33,7 +33,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          routeBasePath: '/catbow-docs/',
+          routeBasePath: '/catbow-docs',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
