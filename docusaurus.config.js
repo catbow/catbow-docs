@@ -9,15 +9,16 @@ const config = {
   title: 'Catbow Tutorial',
   tagline: 'Get up to Speed with Catbow',
   url: 'https://catbow.github.io',
-  baseUrl:'/catbow-docs',
+  baseUrl:'/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Catbow', // Usually your GitHub org/user name.
-  projectName: 'catbow-docs', // Usually your repo name.
+  organizationName: 'catbow', // Usually your GitHub org/user name.
+  projectName: 'catbow.github.io', // Usually your repo name.
+  trailingSlash: false,
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -33,7 +34,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          routeBasePath: '/catbow-docs',
+          routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
