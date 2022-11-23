@@ -55,7 +55,7 @@ const config = {
         title: 'Catbow Tutorial',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/catbow.png',
         },
         items: [
           {
