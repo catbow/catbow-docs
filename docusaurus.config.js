@@ -9,7 +9,7 @@ const config = {
   title: 'Catbow Tutorial',
   tagline: 'Get up to Speed with Catbow',
   url: 'https://catbow.github.io',
-  baseUrl:'/',
+  baseUrl:'/catbow-docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
