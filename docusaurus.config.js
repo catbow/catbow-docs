@@ -9,7 +9,7 @@ const config = {
   title: 'Catbow Tutorial',
   tagline: 'Get up to Speed with Catbow',
   url: 'https://your-docusaurus-test-site.com',
-  baseUrl:'/',
+  baseUrl:'/catbow-docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -33,7 +33,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          routeBasePath: '/',
+          routeBasePath: '/catbow-docs/',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
