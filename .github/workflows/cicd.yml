@@ -1,10 +1,10 @@
 name: Catbow Publish
 
 on:
-	push:
-    	branches: [ "main" ]
+  push:
+    branches: ['main']
   pull_request:
-      branches: [ "main" ]
+    branches: ['main']
 
 jobs:
   deploy:
@@ -21,7 +21,7 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
-  
+
       - name: Build Docusaurus
         run: npm run build
 
