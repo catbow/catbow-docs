@@ -25,7 +25,25 @@ const config = {
 	// to replace "en" with "zh-Hans".
 	i18n: {
 		defaultLocale: 'en',
-		locales: ['en'],
+		locales: ['en', 'ko-kr'],
+		path: 'i18n',
+		localeConfigs: {
+			en: {
+				label: 'English',
+				direction: 'ltr',
+				htmlLang: 'en-US',
+				calendar: 'gregory',
+				path: 'en'
+			},
+			ko: {
+				label: 'Korean',
+				direction: 'ltr',
+				htmlLang: 'ko-KR',
+				calendar: 'gregory',
+				path: 'ko-kr'
+			}
+
+		}
 	},
 
 	presets: [
@@ -52,7 +70,7 @@ const config = {
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
 			navbar: {
-				title: 'Catbow Tutorial',
+				title: 'Catbow Scrollview Tutorial',
 				logo: {
 					alt: 'My Site Logo',
 					src: 'img/catbow.png',
@@ -63,6 +81,10 @@ const config = {
 						label: 'GitHub',
 						position: 'right',
 					},
+					{
+						type: 'localeDropdown',
+						position: 'left'
+					}
 				],
 			},
 			footer: {
