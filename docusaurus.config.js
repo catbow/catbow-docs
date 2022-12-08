@@ -69,7 +69,7 @@ const config = {
 	themeConfig:
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
-			metadata: [{ name: 'catbow', content: 'scrollview, react, scroll, view, catbow, library, scrolleffect, effect, interactive, observer, intersection,Intersection Observer API, open source, scrollevent, ui library' }, { name: 'google-site-verification', content: '8n_JmK4-WSqrcMBpFeuYl7NbWghx-tqnXoFZXsdeqfE' }],
+			metadata: [{ name: 'keywords', content: 'scrollview, react, scroll, view, catbow, library, scrolleffect, effect, interactive, observer, intersection,Intersection Observer API, open source, scrollevent, ui library' }, { name: 'google-site-verification', content: '8n_JmK4-WSqrcMBpFeuYl7NbWghx-tqnXoFZXsdeqfE' }],
 
 			navbar: {
 				title: 'Catbow',

@@ -3,6 +3,20 @@ sidebar_position: 2
 slug: /scrollview
 ---
 
+<head>
+  <meta name="keywords" content="scrollview, react, scroll, view, catbow, library, scrolleffect, effect, interactive, observer, intersection,Intersection Observer API, open source, scrollevent, ui library' }, { name: 'google-site-verification">
+</head>
+
+---
+
+title: Catbow scrollview
+description: Scrollview is `easy to use` and an `useful app` that helps moving images by scrolling the webpage.
+
+image: '../static/img/catbow.png'
+keywords: [catbow, scrollview, library, open source, scroll, event]
+
+---
+
 # Scrollview Tutorial
 
 Let's discover **scrollview** created by _Catbow_!
