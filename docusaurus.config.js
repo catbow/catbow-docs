@@ -69,6 +69,7 @@ const config = {
 	themeConfig:
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
+			metadata: [{ name: 'catbow', content: 'scrollview, react, scroll, view, catbow, library, scrolleffect, effect, interactive, observer, intersection,Intersection Observer API, open source, scrollevent, ui library' }],
 			navbar: {
 				title: 'Catbow',
 				logo: {
