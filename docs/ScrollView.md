@@ -4,7 +4,7 @@ slug: /scrollview
 ---
 
 <head>
-  <meta name="catbow" content="cooking, blog">
+  <meta name="keywords" content="scrollview, react, scroll, view, catbow, library, scrolleffect, effect, interactive, observer, intersection,Intersection Observer API, open source, scrollevent, ui library' }, { name: 'google-site-verification">
 </head>
 
 ---
