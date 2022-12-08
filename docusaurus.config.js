@@ -23,28 +23,28 @@ const config = {
 	// Even if you don't use internalization, you can use this field to set useful
 	// metadata like html lang. For example, if your site is Chinese, you may want
 	// to replace "en" with "zh-Hans".
-	i18n: {
-		defaultLocale: 'en',
-		locales: ['en', 'ko-kr'],
-		path: 'i18n',
-		localeConfigs: {
-			en: {
-				label: 'English',
-				direction: 'ltr',
-				htmlLang: 'en-US',
-				calendar: 'gregory',
-				path: 'en'
-			},
-			ko: {
-				label: 'Korean',
-				direction: 'ltr',
-				htmlLang: 'ko-KR',
-				calendar: 'gregory',
-				path: 'ko-kr'
-			}
+	// i18n: {
+	// 	defaultLocale: 'en',
+	// 	locales: ['en', 'ko-kr'],
+	// 	path: 'i18n',
+	// 	localeConfigs: {
+	// 		en: {
+	// 			label: 'English',
+	// 			direction: 'ltr',
+	// 			htmlLang: 'en-US',
+	// 			calendar: 'gregory',
+	// 			path: 'en'
+	// 		},
+	// 		ko: {
+	// 			label: 'Korean',
+	// 			direction: 'ltr',
+	// 			htmlLang: 'ko-KR',
+	// 			calendar: 'gregory',
+	// 			path: 'ko-kr'
+	// 		}
 
-		}
-	},
+	// 	}
+	// },
 
 	presets: [
 		[
@@ -61,12 +61,12 @@ const config = {
 				blog: false,
 				theme: {
 					customCss: require.resolve('./src/css/custom.css'),
-					sitemap: {
-						changefreq: 'weekly',
-						priority: 0.5,
-						ignorePatterns: ['/tags/**'],
-						filename: 'sitemap.xml'
-					}
+					// sitemap: {
+					// 	changefreq: 'weekly',
+					// 	priority: 0.5,
+					// 	ignorePatterns: ['/tags/**'],
+					// 	filename: 'sitemap.xml'
+					// }
 				},
 			}),
 		],
@@ -75,7 +75,7 @@ const config = {
 	themeConfig:
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
-			metadata: [{ name: 'keywords', content: 'scrollview, react, scroll, view, catbow, library, scrolleffect, effect, interactive, observer, intersection,Intersection Observer API, open source, scrollevent, ui library' }, { name: 'google-site-verification', content: '8n_JmK4-WSqrcMBpFeuYl7NbWghx-tqnXoFZXsdeqfE' }, { name: 'robots', content: 'noindex' }],
+			metadata: [{ name: 'keywords', content: 'scrollview, react, scroll, view, catbow, library, scrolleffect, effect, interactive, observer, intersection,Intersection Observer API, open source, scrollevent, ui library' }, { name: 'google-site-verification', content: '8n_JmK4-WSqrcMBpFeuYl7NbWghx-tqnXoFZXsdeqfE' }],
 
 			navbar: {
 				title: 'Catbow',
