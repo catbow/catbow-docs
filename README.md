@@ -4,4 +4,4 @@ Catbow provides easy and useful function!
 
 Have a go for scrollview function we have created recently.
 
-👉 [Catbow ScrollView Github](https://github.com/catbow/react-catbow-scrollview)
+👉 [Catbow ScrollView Documentation](https://catbow.github.io/catbow-docs/)
