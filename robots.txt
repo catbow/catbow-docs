@@ -1,2 +1,3 @@
 User-agent: *
-Disallow:
+Allow: /
+Sitemap: https://catbow.github.io/catbow-docs/sitemap.xml
