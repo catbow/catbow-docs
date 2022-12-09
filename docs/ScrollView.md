@@ -104,3 +104,158 @@ function App() {
 <br/>
 
 #### [Catbow Github](https://github.com/catbow/react-catbow-scrollview)
+
+### Detailed explaination
+
+#### 1. Explained with JSDoc for your better understanding
+
+<img src="https://velog.velcdn.com/images/juno97/post/1de0d31a-26e8-4213-b506-3ee29e60499e/image.png" alt="caputured code for scrollview explaination" />
+
+Scrollview supports to show how to set the options in the Code Editor.
+You can just hover the cursor on the component!
+
+If you still don't understand certain things, please refer to the options in the README.md on <a href="https://github.com/catbow/react-catbow-scrollview">Github react-catbow-scrollview repository</a>.
+
+#### 2. position: sticky
+
+Scrollview component has the CSS `position: sticky` property because the bunch of images should not disappear from the screen.
+
+Therefore, you should keep the following situations in mind and style them.
+
+a. If it's not set as full screen, you should decorate the surroundings, or it would be showing as below.
+
+<img src="https://velog.velcdn.com/images/juno97/post/2ecd4ff5-b4dd-4c28-8318-d434e3ff41e8/image.gif" alt="gif for how the screen would be seen without any decoration"/>
+
+when it is set as a full-screen, the result would be:
+
+<img src="https://velog.velcdn.com/images/juno97/post/28366e5a-bc6e-4dae-95e9-ad4b67cd288f/image.gif" alt="fullscreen" />
+
+```javascript
+const option = {
+  videoImageCount: 754,
+  imgUrl: "./004/",
+  startNum: 10000,
+  extension: ".jpg",
+  scrollAreaY: 6000,
+  viewPort: {
+    width: "100vw",
+    height: "100vh",
+  },
+};
+```
+
+B. the scroll area : `ScrollAreaY` increases the playback length.
+Each user would have their own desired percentage, so if you increase it to 100 units step by step and test it, you will get your desired percentage.
+
+<img src="https://velog.velcdn.com/images/juno97/post/d3d7e21b-943c-4fa7-b4ad-7acad968fe70/image.gif" alt="img"/>
+
+```javascript
+const option = {
+  videoImageCount: 754,
+  imgUrl: "./004/",
+  startNum: 10000,
+  extension: ".jpg",
+  scrollAreaY: 100000, // It's hard to scroll because it's 100,000.
+  viewPort: {
+    width: "100vw",
+    height: "100vh",
+  },
+};
+```
+
+#### 3. viewPort is `<img />` Tag itself
+
+This is an example of making a circle with border properties.
+<img src="https://velog.velcdn.com/images/juno97/post/278df54d-97ac-4739-83f5-667220cf7110/image.gif" alt="img"/>
+
+```javascript
+const option = {
+  videoImageCount: 754,
+  imgUrl: "./004/",
+  startNum: 10000,
+  extension: ".jpg",
+  scrollAreaY: 10000,
+  viewPort: {
+    //  img tag!!
+    width: "500px",
+    height: "500px",
+    margin: "100px 100px",
+    borderRadius: "9999px",
+  },
+};
+```
+
+#### 4. viewItem is a special option to render JSX inside
+
+I thought a lot about this option.
+When I made a library, I aimed to make it easy to use, easy to access
+This option gives you the option to customize your library
+At the same time, I felt compelled to act. (But I did!))
+
+I simply added the phrase "hello" as showing below.
+
+<img src="https://velog.velcdn.com/images/juno97/post/2c796d9d-d5c9-4254-8c56-8d814ca9ac8d/image.gif" alt="img"/>
+
+There are only two rules to follow.
+
+1. For the components to be handed over, make sure to put the css position: absolute property at the top.
+2. You have to pass it to JSX syntax. If you turn over the prop with the viewItem, it will render inside the component.
+
+```javascript
+// Components to render within ScrollView
+function Component() {
+  return (
+    <div style={{ position: "absolute", top: "95px", left: "75px" }}>
+      <div style={{ fontSize: "150px" }}>hello</div>
+    </div>
+  );
+}
+
+function App() {
+  const option = {
+    videoImageCount: 754,
+    imgUrl: "./004/",
+    startNum: 10000,
+    extension: ".jpg",
+    scrollAreaY: 10000,
+    // top: 30,  => css top property
+    viewPort: {
+      width: "500px",
+      height: "500px",
+      margin: "100px 500px",
+      borderRadius: "9999px",
+    },
+  };
+
+  return (
+    <>
+      <div
+        className='App'
+        style={{ height: "1000px", background: "skyblue" }}
+      />
+      // When you pass it over, like this!
+      <ScrollView option={option} viewItem={<Component />} />
+      <div
+        className='App'
+        style={{ height: "1000px", background: "skyblue" }}
+      />
+    </>
+  );
+}
+```
+
+#### 5. option.top
+
+This is the top option of example code number 4, which is the CSS top property of the view area that moves with `position: sticky`.
+
+#### 6. Issues
+
+If there are any improvements or bugs while using it, please leave the issue of <a href="https://github.com/catbow/react-catbow-scrollview/issues">recat-catbow-scrollview</a>
+It's a great help to maintain this library!
+
+#### 7. Catbow
+
+Catbow will continue to add libraries that provide easy-to-use, interactive features.
+I've started with React-components-library first, but I will make it a library that works in other frameworks as well.
+
+Thank you.
