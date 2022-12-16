@@ -110,11 +110,32 @@ function App() {
 
 <!-- <img src='https://i.ibb.co/vZV4zxT/scroll-View.gif' style='height:200px; border: 1px solid black; padding:10px'/> -->
 
-[Test Img Zip](https://drive.google.com/file/d/1i-CypIWeH-LSh3XjOvFtBMfgiIgxtzfn/view?usp=share_link)
+🗂 [Test Img Zip](https://drive.google.com/file/d/1i-CypIWeH-LSh3XjOvFtBMfgiIgxtzfn/view?usp=share_link)
 
 <br/>
 
-#### [Catbow Github](https://github.com/catbow/react-catbow-scrollview)
+#### 👉 [Catbow Github](https://github.com/catbow/react-catbow-scrollview)
+
+> **😺🌈 Catbow tips!** <br/>
+> if those names of images are like 'IMG*1', 'IMG_2'....'IMG_100' (because in the example on the top, the image names are composed of numbers only) you should set the option as below. the part of the name `IMG*`should be in`imgUrl`and numbers should be in`startNum`
+
+> please look carefully the option of` imgUrl`, `videoImageCount `& `startNum`
+
+```javascript
+const option = {
+	imgUrl: './images/004/IMG_', //  Address before image
+	videoImageCount: 100, // Total-number-of-images
+	startNum: 1, // Image-path-start-number
+	extension: '.jpg', // Available-with-any-image-extension
+	scrollAreaY: 50000, // scrollArea,
+	top: 20 // top: 20px
+	viewPort: {
+		// all-imgTag-styles-available
+		width: '500px',
+	},
+};
+<ScollView option={option} viewItem={<Components />} />;
+```
 
 ### Detailed explaination
 
@@ -139,7 +160,7 @@ a. If it's not set as full screen, you should decorate the surroundings, or it w
 
 when it is set as a full-screen, the result would be:
 
-<img src="https://velog.velcdn.com/images/juno97/post/28366e5a-bc6e-4dae-95e9-ad4b67cd288f/image.gif" alt="fullscreen" />
+<img src="img/gif-scrollview.gif" alt="fullscreen" />
 
 ```javascript
 const option = {
