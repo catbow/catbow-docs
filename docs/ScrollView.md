@@ -139,7 +139,7 @@ a. If it's not set as full screen, you should decorate the surroundings, or it w
 
 when it is set as a full-screen, the result would be:
 
-<img src="https://velog.velcdn.com/images/juno97/post/28366e5a-bc6e-4dae-95e9-ad4b67cd288f/image.gif" alt="fullscreen" />
+<img src="img/gif-scrollview.gif" alt="fullscreen" />
 
 ```javascript
 const option = {
