@@ -15,7 +15,18 @@ Let's discover **scrollview** created by _Catbow_!
 
 Scrollview is `easy to use` and an `useful app` that helps moving images by scrolling the webpage.
 
-![Alt Text](../static/img/scrollviewGif.gif)
+![gif for scrollview](../static/img/scrollviewGif.gif)
+
+> **😺🌈 Catbow tips!** <br/>
+> Have you got a video that you would like to to make as scrollview effect as above? <br/>
+> You can covert your video (less than 30s) to photos **for free** from catbow converter!<br/>
+> website : https://catbow.github.io/catbow-photo-converter/
+
+<!-- ![Catbow converter Img](../static//img//catbowConverter.png =100) -->
+
+<a href="https://catbow.github.io/catbow-photo-converter/"><img src='img/catbowConverter.png' alt ="Catbow image converter" width="200"/></a>
+<br/>
+<br/>
 
 # Installation
 
