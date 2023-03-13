@@ -54,7 +54,7 @@ const option = {
 // viewItem is optional
 // you can render Components in ScollView
 // setEjectRatio is optional
-// yuo can get ImageCount ratio
+// you can get ImageCount ratio
 ```
 
 #### ❉❉ The image address path must have consecutive numbers.
