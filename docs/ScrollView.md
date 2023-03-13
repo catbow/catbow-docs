@@ -3,7 +3,7 @@ sidebar_position: 2
 slug: /scrollview
 title: Catbow scrollview
 description: Scrollview is `easy to use` and an `useful app` that helps moving images by scrolling the webpage.
-image: "https://catbow.github.io/catbow-docs/img/catbow.png"
+image: 'https://catbow.github.io/catbow-docs/img/catbow.png'
 keywords: [catbow, scrollview, library, open source, scroll, event]
 ---
 
@@ -50,25 +50,28 @@ const option = {
 	},
 };
 // Render
-<ScollView option={option} viewItem={<Components />} />;
+<ScollView option={option} viewItem={<Components />} setEjectRatio={setEjectRatio}/>;
 // viewItem is optional
 // you can render Components in ScollView
+// setEjectRatio is optional
+// yuo can get ImageCount ratio
 ```
 
 #### ❉❉ The image address path must have consecutive numbers.
 
 <br/>
 
-| option          | discription                                  | type           |
-| --------------- | -------------------------------------------- | -------------- |
-| imgUrl          | Address before image                         | String         |
-| videoImageCount | Total-number-of-images                       | String         |
-| startNum        | Image-path-start-number                      | Number         |
-| extension       | Available-with-any-image-extension           | String         |
-| scrollAreaY     | scrollArea                                   | Number         |
-| viewPort?       | img-style                                    | Object         |
-| top?            | css style top                                | Number         |
-| viewItem?       | Jsx components can be rendered in ScrollVIew | JSX Components |
+| option          | discription                                                                     | type               |
+| --------------- | ------------------------------------------------------------------------------- | ------------------ |
+| imgUrl          | Address before image                                                            | String             |
+| videoImageCount | Total-number-of-images                                                          | String             |
+| startNum        | Image-path-start-number                                                         | Number             |
+| extension       | Available-with-any-image-extension                                              | String             |
+| scrollAreaY     | scrollArea                                                                      | Number             |
+| viewPort?       | img-style                                                                       | Object             |
+| top?            | css style top                                                                   | Number             |
+| viewItem?       | Jsx components can be rendered in ScrollVIew                                    | JSX Components     |
+| setEjectRatio?  | you can hooks From the parent component and get ImageCount Ratio(return number) | setState => number |
 
 ### How to use viewItem option
 
@@ -79,32 +82,37 @@ const option = {
 ```javascript
 // this is components
 export default function Hello() {
-  return (
-    <div style={{ top: "10px", position: "absolute" }}>
-      <h1 style={{ fontSize: "5rem" }}>hello world</h1>
-      <h1 style={{ marginTop: "600px", fontSize: "5rem" }}>
-        React-catbow-ScrollView
-      </h1>
-    </div>
-  );
+	return (
+		<div style={{ top: '10px', position: 'absolute' }}>
+			<h1 style={{ fontSize: '5rem' }}>hello world</h1>
+			<h1 style={{ marginTop: '600px', fontSize: '5rem' }}>
+				React-catbow-ScrollView
+			</h1>
+		</div>
+	);
 }
 //
 function App() {
-  const option = {
-    videoImageCount: 754,
-    imgUrl: "./images/004/",
-    startNum: 10000,
-    extension: ".jpg",
-    scrollAreaY: 4970,
-    top: 30,
-    viewPort: {
-      width: "550px",
-      height: "550px",
-      margin: "100px 100px",
-      borderRadius: "9999px",
-    },
-  };
-  return <ScrollView option={option} viewItem={<Btton />} />;
+	const option = {
+		videoImageCount: 754,
+		imgUrl: './images/004/',
+		startNum: 10000,
+		extension: '.jpg',
+		scrollAreaY: 4970,
+		top: 30,
+		viewPort: {
+			width: '550px',
+			height: '550px',
+			margin: '100px 100px',
+			borderRadius: '9999px',
+		},
+	};
+	return (
+		<ScrollView
+			option={option}
+			viewItem={<Btton />}
+		/>
+	);
 }
 ```
 
@@ -164,15 +172,15 @@ when it is set as a full-screen, the result would be:
 
 ```javascript
 const option = {
-  videoImageCount: 754,
-  imgUrl: "./004/",
-  startNum: 10000,
-  extension: ".jpg",
-  scrollAreaY: 6000,
-  viewPort: {
-    width: "100vw",
-    height: "100vh",
-  },
+	videoImageCount: 754,
+	imgUrl: './004/',
+	startNum: 10000,
+	extension: '.jpg',
+	scrollAreaY: 6000,
+	viewPort: {
+		width: '100vw',
+		height: '100vh',
+	},
 };
 ```
 
@@ -183,15 +191,15 @@ Each user would have their own desired percentage, so if you increase it to 100 
 
 ```javascript
 const option = {
-  videoImageCount: 754,
-  imgUrl: "./004/",
-  startNum: 10000,
-  extension: ".jpg",
-  scrollAreaY: 100000, // It's hard to scroll because it's 100,000.
-  viewPort: {
-    width: "100vw",
-    height: "100vh",
-  },
+	videoImageCount: 754,
+	imgUrl: './004/',
+	startNum: 10000,
+	extension: '.jpg',
+	scrollAreaY: 100000, // It's hard to scroll because it's 100,000.
+	viewPort: {
+		width: '100vw',
+		height: '100vh',
+	},
 };
 ```
 
@@ -202,18 +210,18 @@ This is an example of making a circle with border properties.
 
 ```javascript
 const option = {
-  videoImageCount: 754,
-  imgUrl: "./004/",
-  startNum: 10000,
-  extension: ".jpg",
-  scrollAreaY: 10000,
-  viewPort: {
-    //  img tag!!
-    width: "500px",
-    height: "500px",
-    margin: "100px 100px",
-    borderRadius: "9999px",
-  },
+	videoImageCount: 754,
+	imgUrl: './004/',
+	startNum: 10000,
+	extension: '.jpg',
+	scrollAreaY: 10000,
+	viewPort: {
+		//  img tag!!
+		width: '500px',
+		height: '500px',
+		margin: '100px 100px',
+		borderRadius: '9999px',
+	},
 };
 ```
 
@@ -236,43 +244,46 @@ There are only two rules to follow.
 ```javascript
 // Components to render within ScrollView
 function Component() {
-  return (
-    <div style={{ position: "absolute", top: "95px", left: "75px" }}>
-      <div style={{ fontSize: "150px" }}>hello</div>
-    </div>
-  );
+	return (
+		<div style={{ position: 'absolute', top: '95px', left: '75px' }}>
+			<div style={{ fontSize: '150px' }}>hello</div>
+		</div>
+	);
 }
 
 function App() {
-  const option = {
-    videoImageCount: 754,
-    imgUrl: "./004/",
-    startNum: 10000,
-    extension: ".jpg",
-    scrollAreaY: 10000,
-    // top: 30,  => css top property
-    viewPort: {
-      width: "500px",
-      height: "500px",
-      margin: "100px 500px",
-      borderRadius: "9999px",
-    },
-  };
+	const option = {
+		videoImageCount: 754,
+		imgUrl: './004/',
+		startNum: 10000,
+		extension: '.jpg',
+		scrollAreaY: 10000,
+		// top: 30,  => css top property
+		viewPort: {
+			width: '500px',
+			height: '500px',
+			margin: '100px 500px',
+			borderRadius: '9999px',
+		},
+	};
 
-  return (
-    <>
-      <div
-        className='App'
-        style={{ height: "1000px", background: "skyblue" }}
-      />
-      // When you pass it over, like this!
-      <ScrollView option={option} viewItem={<Component />} />
-      <div
-        className='App'
-        style={{ height: "1000px", background: "skyblue" }}
-      />
-    </>
-  );
+	return (
+		<>
+			<div
+				className='App'
+				style={{ height: '1000px', background: 'skyblue' }}
+			/>
+			// When you pass it over, like this!
+			<ScrollView
+				option={option}
+				viewItem={<Component />}
+			/>
+			<div
+				className='App'
+				style={{ height: '1000px', background: 'skyblue' }}
+			/>
+		</>
+	);
 }
 ```
 
